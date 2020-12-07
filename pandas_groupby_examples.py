@@ -1,6 +1,6 @@
 # Group by similar to SQL:
 
-grouped.agg({'C_sum' : lambda x: x['C'].sum(),
+df.groupby(['PC_enc']).agg({'C_sum' : lambda x: x['C'].sum(),
              'C_std': lambda x: x['C'].std(),
              'D_sum' : lambda x: x['D'].sum()},
              'D_sumifC3': lambda x: x['D'][x['C'] == 3].sum(), ...)
