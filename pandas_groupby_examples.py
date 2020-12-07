@@ -1,4 +1,4 @@
-# Group by similar to SQL:
+# Example 1: Group by similar to SQL:
 
 grouped.agg({'C_sum' : lambda x: x['C'].sum(),
              'C_std': lambda x: x['C'].std(),
@@ -6,8 +6,11 @@ grouped.agg({'C_sum' : lambda x: x['C'].sum(),
              'D_sumifC3': lambda x: x['D'][x['C'] == 3].sum(), ...)
 
 
+# Example 2: apply the sae function on all of the remaining columns
+response_data_weekly = response_data.groupby(['member_uuid', 'metric_week'])[['metric_value', 'baseline_metric_value', 'lusm_score']].median().reset_index()
 
 
+# Example 3:
 def my_func(df):
         
         # Create a pandas series
