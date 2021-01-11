@@ -3,6 +3,7 @@
 df.groupby('A').B.mean()
 df.groupby('A').B.max()
 df.groupby('A').B.agg(['min', 'max'])
+df.groupby(['Name', 'Fruit']).agg({'Number': "sum"})
 
 
 
