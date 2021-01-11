@@ -1,4 +1,10 @@
 # Example 1: Group by similar to SQL:
+#Simple examples:
+df.groupby('A').B.mean()
+df.groupby('A').B.max()
+df.groupby('A').B.agg(['min', 'max'])
+
+
 
 grouped.agg({'C_sum' : lambda x: x['C'].sum(),
              'C_std': lambda x: x['C'].std(),
