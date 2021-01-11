@@ -3,7 +3,6 @@
 df.groupby('A').B.mean()
 df.groupby('A').B.max()
 df.groupby('A').B.agg(['min', 'max'])
-df.groupby(['Name', 'Fruit']).agg({'Number': "sum"})
 
 temp['total'] = pd.DataFrame(project_data.groupby(col1)[col2].agg(total='count')).reset_index()['total']
 temp['Avg'] = pd.DataFrame(project_data.groupby(col1)[col2].agg(Avg='mean')).reset_index()['Avg']
